@@ -1,6 +1,6 @@
 const {
   // eslint-disable-next-line max-len
-  addBook,
+  addBook, getAllBook,
 } = require('./handler');
 
 const routes = [
@@ -9,11 +9,11 @@ const routes = [
     path: '/books',
     handler: addBook,
   },
-  // {
-  //   method: 'GET',
-  //   path: '/books',
-  //   handler: () => {},
-  // },
+  {
+    method: 'GET',
+    path: '/books',
+    handler: getAllBook,
+  },
 ];
 
 module.exports = routes;
