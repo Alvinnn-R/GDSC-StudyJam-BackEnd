@@ -1,6 +1,6 @@
 const {
   // eslint-disable-next-line max-len
-  addBook, getAllBook,
+  addBook, getAllBook, getBook, updateBook,
 } = require('./handler');
 
 const routes = [
@@ -13,6 +13,16 @@ const routes = [
     method: 'GET',
     path: '/books',
     handler: getAllBook,
+  },
+  {
+    method: 'GET',
+    path: '/books/{bookId}',
+    handler: getBook,
+  },
+  {
+    method: 'PUT',
+    path: '/books/{bookId}',
+    handler: updateBook,
   },
 ];
 
